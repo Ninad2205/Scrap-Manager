@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <form method="post" action="/elements/<%= element.id %>?_method=put">
+                <br>
+                <h1>Edit Element</h1>
+                <br>
+                <div class="mb-2">
+                    <label for="title" class="form-label">Enter Title : </label>
+                    <input type="text" class="form-control" name="element[title]" value="<%=element.title  %>">
+                </div>
+
+                <div class="mb-2">
+                    <label for="description" class="form-label">Enter Description : </label>
+                    <textarea class="form-control" name="element[description]"><%=element.description %></textarea>
+                </div>
+
+                <div class="mb-2">
+                    <label for="image" class="form-label">Enter Image Url : </label>
+                    <input type="text" class="form-control" name="element[image]" value="<%=element.image %>">
+                </div>
+
+                <div class="mb-2">
+                    <label for="price" class="form-label">Enter Price : </label>
+                    <input type="text" class="form-control" name="element[price]" value="<%=element.price %>">
+                </div>
+                
+
+                
+                
+                <button class="btn btn-dark add-btn mt-3">Add Changes</button>
+                
+            </form>
+            <br>
+        </div>
+    </div>
+</body>
